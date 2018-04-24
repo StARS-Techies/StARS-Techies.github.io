@@ -1,4 +1,7 @@
-/* This is purely for the demo */
+.body {
+    background-image: url("http://reidark.com.br/themes/soundcast/assets/img/podcast-hero.jpg");
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
