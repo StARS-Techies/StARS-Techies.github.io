@@ -1,8 +1,9 @@
-(function() {
+// (function() {
+$(() => {
     // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
     // e.g. just plyr.setup(); and leave it at that if you have no need for events
     // var players = plyr.setup({
-    const players = plyr.setup('#player', {
+    const players = plyr.setup('.player', {
         // Output to console
         debug: false,
         controls: [
@@ -15,7 +16,6 @@
             // 'captions',  // don't allow captions
             // 'fullscreen' // don't allow fullscreen
         ],
-        clickToPlay: false, // have to click on button to play / pause
         hideControls: false // never hide status bottom status bar
     });
     const Player = players[0];
@@ -44,4 +44,4 @@
     $('.js-forward').click((e) => {
         Player.forward();
     });
-})();
+});
