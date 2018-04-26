@@ -19,42 +19,29 @@
         hideControls: false // never hide status bottom status bar
     });
     const Player = players[0];
-  
-    // Get an element
-    function get(selector) {
-        return document.querySelector(selector);
-    }
-  
-    // Custom event handler (from demo site)
-    function on(element, type, callback) {
-        if (!(element instanceof HTMLElement)) {
-            element = get(element);
-        }
-        element.addEventListener(type, callback, false);
-    }
 
     // Play
-    on('.js-play', 'click', function(e) { 
+    $('.js-play').click((e) => { 
         Player.play();
     });
     
     // Pause
-    on('.js-pause', 'click', function() { 
+    $('.js-pause').click((e) => {
         Player.pause();
     });
     
     // Stop
-    on('.js-stop', 'click', function() { 
+    $('.js-stop').click((e) => {
         Player.stop();
     });
     
     // Rewind
-    on('.js-rewind', 'click', function() { 
+    $('.js-rewind').click((e) => {
         Player.rewind();
     });
     
-    // Forward
-    on('.js-forward', 'click', function() { 
+    // Forward 
+    $('.js-forward').click((e) => {
         Player.forward();
     });
 })();
