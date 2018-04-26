@@ -12,66 +12,39 @@
         <!-- Google-fonts -->
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/main.css">
+        <!-- Imports -->
         <script src="js/jquery-3.3.1-unmin.js"></script>
         <script src="https://cdn.plyr.io/2.0.7/plyr.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script> -->
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCFv1E9M-2TK86hNkNK9DN4X-dirSDkzh0",
+            authDomain: "plyr-podcast-app.firebaseapp.com",
+            databaseURL: "https://plyr-podcast-app.firebaseio.com",
+            // projectId: "plyr-podcast-app",
+            storageBucket: "plyr-podcast-app.appspot.com",
+            // messagingSenderId: "725186605966"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <!-- My custom code -->
+        <script src="./js/FBUtil.js"></script>
+        <script src="./js/Utils.js"></script>
+        <link rel="stylesheet" href="./styles/main.css">
 
         <!-- Main scripts - needs to go below all others -->
         <script src="./js/main.js"></script>
     </head>
     <body>
         <h1 id="page-title">Welcome to the StARS Podcast!</h1>
-        <div class="container">
-            <!-- Demo setup for video file -->
-            <!-- <video id="player" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" controls crossorigin> -->
-                <!-- Video files -->
-                <!-- <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.mp4" type="video/mp4"> -->
-                <!-- <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.webm" type="video/webm"> -->
-            
-                <!-- Text track file -->
-                <!-- <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default> -->
-            
-                <!-- Fallback for browsers that don't support the <video> element -->
-                <!-- <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.mp4" download>Download</a> -->
-            <!-- </video> -->
+        
+        <!-- Players get inserted here -->
+        <div class="container"></div>
 
-            <!-- Demo setup for youtube video -->
-            <!-- <div class="plyr__video-embed" id="player">
-                <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
-            </div> -->
-
-            <!-- Audio setup -->
-            <div class="audio-player-container">
-                <p>Title</p>
-                <audio class="player" controls>
-                    <!-- File hosted on Github, url from rawgit.com - Note: this is dev url, not production -->
-                    <source src="https://rawgit.com/StARS-Techies/StARS-Techies.github.io/master/sounds/test/Test10s.mp3" type="audio/mp3">
-                </audio>
-            </div>
-
-            <div class="audio-player-container">
-                <p>Title</p>
-                <audio class="player" controls>
-                    <source src="https://rawgit.com/StARS-Techies/StARS-Techies.github.io/master/sounds/test/Test60s.mp3" type="audio/mp3">
-                </audio>
-            </div>
-
-            <div class="audio-player-container">
-                <p>Title</p>
-                <audio class="player" controls>
-                    <source src="https://rawgit.com/StARS-Techies/StARS-Techies.github.io/master/sounds/test/Test60s.mp3" type="audio/mp3">
-                </audio>
-            </div>
-
-            <!-- maybe these aren't necessary? -->
-            <!-- <div class="actions">
-                <button type="button" class="btn js-play">Play</button>
-                <button type="button" class="btn js-pause">Pause</button>
-                <button type="button" class="btn js-stop">Stop</button>
-                <button type="button" class="btn js-rewind">Rewind</button>
-                <button type="button" class="btn js-forward">Forward</button>
-            </div> -->
-        </div>
         <footer>
             Some footer text?
         </footer>
